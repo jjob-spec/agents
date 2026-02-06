@@ -7,14 +7,14 @@ from pathlib import Path
 # Falls back to platform-specific defaults
 _default_vault_paths = {
     "Darwin": "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/MyVault",
-    "Linux": "~/obsidian-vault",
+    "Linux": "~/obsidian/MyVault",
     "Windows": "~/Documents/ObsidianVault",
 }
 
 VAULT_PATH = Path(os.path.expanduser(
     os.environ.get(
         "OBSIDIAN_VAULT_PATH",
-        _default_vault_paths.get(platform.system(), "~/obsidian-vault")
+        _default_vault_paths.get(platform.system(), "~/obsidian/MyVault")
     )
 ))
 
